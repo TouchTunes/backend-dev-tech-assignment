@@ -1,0 +1,31 @@
+// https://next.json-generator.com/
+
+//jukes
+[
+  {
+    'repeat(30)': {
+      id: '{{objectId()}}',
+      model: '{{random("angelina","fusion","virtuo")}}',
+      components: [
+        {
+          'repeat(0,5)': {
+            name: '{{random("money_receiver","money_storage","money_pcb","led_matrix","led_panel","touchscreen","speaker","pcb","camera","amplifier")}}'
+          }
+        }
+      ]
+    }
+  }
+]
+//settings
+[
+  {
+    'repeat(30)': {
+      name: '{{guid()}}',
+      requires: [
+        {
+          'repeat(0,5)': '{{random("money_receiver","money_storage","money_pcb","led_matrix","led_panel","touchscreen","speaker","pcb","camera","amplifier")}}'
+        }
+      ]
+    }
+  }
+]
