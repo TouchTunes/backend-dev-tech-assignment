@@ -13,12 +13,9 @@ You need to create a REST API with a single GET endpoint which returns a paginat
  - `offset` - specifies at what index start the page (optional)
  - `limit` - specifies the page size (optional)
 
-Create a production-ready implementation and make sure you use the mocked APIs listed below.
-_Hint_: docs / error codes / tests / API docs
-
-## For bonus points
-
-Dockerize the project.
+Create a production-ready implementation and make sure you use the mocked APIs listed below.  
+_Hint_: docs / error codes / tests / API docs  
+Bonus points: dockerize you application.
 
 ## Important notes
 
@@ -38,8 +35,6 @@ Returns a list of jukeboxes with information about them:
     "name": "led_panel"
   }, {
     "name": "amplifier"
-  }, {
-    "name": "led_panel"
   }]
 },
 ...
