@@ -27,7 +27,7 @@ Returns a list of jukeboxes with information about them:
 
 **GET** `http://my-json-server.typicode.com/touchtunes/tech-assignment/jukes`:
 
-```json
+```js
 [{
   "id": "5ca94a8ac470d3e47cd4713c",
   "model": "fusion",
@@ -47,7 +47,7 @@ Returns a list of all the available jukebox settings. Each setting contains a li
 
 **GET** `http://my-json-server.typicode.com/touchtunes/tech-assignment/settings`:
 
-```json
+```js
 {
   "settings": [{
     "id": "e9869bbe-887f-4d0a-bb9d-b81eb55fbf0a",
