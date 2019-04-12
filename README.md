@@ -37,7 +37,7 @@ Returns a list of jukeboxes with information about them:
     "name": "amplifier"
   }]
 },
-...
+//...
 ]
 ```
  
@@ -56,7 +56,7 @@ Returns a list of all the available jukebox settings. Each setting contains a li
     "id": "db886f37-16e3-4a55-80e4-cfffc9e4e464",
     "requires": ["touchscreen", "money_pcb", "led_panel", "money_receiver"]
   },
-  ...
+  //...
   ]
 }
 ```
