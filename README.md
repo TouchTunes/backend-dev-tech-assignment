@@ -1,9 +1,11 @@
 (english version follows)
 
-# Affectation technique du développeur backend
+# Affectation technique du Développeur Java
+L’usage du masculin dans ce document a pour unique but d’alléger le texte
+
 ## Énoncé du problème
 
-Imaginez que vous produisez une application Web qui permet la prise en charge à distance des réglages de jukebox.  Selon les composantes matérielles propres au jukebox, il est possible qu'un réglage donné soit compatible ou non.
+Imaginez que vous devez produite une application Web qui permet la prise en charge à distance des réglages de jukebox.  Selon les composantes matérielles propres au jukebox, il est possible qu'un réglage donné soit compatible ou non.
 Exemples: 
 - un jukebox avec une composante "panneau DEL" est compatible avec le réglage `animation_type`.
 - un jukebox sans composante "money receiver" est incompatible avec le réglage `currency`.
