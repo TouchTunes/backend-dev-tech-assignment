@@ -1,3 +1,77 @@
+(english version follows)
+
+# Affectation technique du développeur backend
+## Énoncé du problème
+
+Imaginez que vous produisez une application Web qui permet la prise en charge à distance des réglages de jukebox.  Selon les composantes matérielles propres au jukebox, il est possible qu'un réglage donné soit compatible ou non.
+Exemples: 
+- un jukebox avec une composante "panneau DEL" est compatible avec le réglage `animation_type`.
+- un jukebox sans composante "money receiver" est incompatible avec le réglage `currency`.
+
+## L'Affectation
+
+L'affectation consiste à produire un API REST offrant un seul point d'accès GET retournant une liste paginée de jukebox qui se conforment au réglage indiqué en paramètre. Les paramètres suivants doivent être supportés:
+
+ - `settingId` - identifiant unique d'un réglage (requis)
+ - `model` - filtre sur le nom du modèle (optionel)
+ - `offset` - indique l'indice de départ de la page (optionel)
+ - `limit` - indique la portée (nombre limite d'éléments) de la page (optionel)
+
+Produire une solution _industrielle_ (prêt pour une mise en opération) et assurez-vous de faire appel aux sources de données ci-dessous.  
+_Indice_: docs / error codes / tests / API docs  
+
+Points bonis: livrer une version de votre application sous forme de conteneur Docker.
+
+## À noter
+
+Vous devez faire appel aux services d'API ci-dessous.  Ils représentent les sources de données de référence.
+
+### Jukebox API
+
+Ce service fourni la liste de jukebox ainsi que certaines caractéristiques dont leur composantes.
+
+**GET** `http://my-json-server.typicode.com/touchtunes/tech-assignment/jukes`:
+
+```js
+[{
+  "id": "5ca94a8ac470d3e47cd4713c",
+  "model": "fusion",
+  "components": [{
+    "name": "led_panel"
+  }, {
+    "name": "amplifier"
+  }]
+},
+//...
+]
+```
+ 
+### Settings API
+
+Ce service fourni la liste de tous les réglages de jukebox disponibles.  Chaque réglage contient une liste de composantes requises qu'un jukebox devrait posséder afin de se conformer à un réglage donné.
+
+**GET** `http://my-json-server.typicode.com/touchtunes/tech-assignment/settings`:
+
+```js
+{
+  "settings": [{
+    "id": "e9869bbe-887f-4d0a-bb9d-b81eb55fbf0a",
+    "requires": ["camera", "speaker", "pcb"]
+  }, {
+    "id": "db886f37-16e3-4a55-80e4-cfffc9e4e464",
+    "requires": ["touchscreen", "money_pcb", "led_panel", "money_receiver"]
+  },
+  //...
+  ]
+}
+```
+
+**Note** un réglage donné est considéré comme étant supporté par un jukebox seulement si le jukebox possède _tous_ les composantes requises.
+
+## Soumission
+
+Soumettre le travail via un dépôt github / gitlab / bitbucket (conseil: ne pas utiliser "touchtunes" dans le nom ou la description) ou via un fichier ZIP.
+
 # Backend Developer tech assignment
 
 ## Problem description
